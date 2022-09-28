@@ -81,7 +81,7 @@ ul{
 }
 
 .padding-20{
-  padding: 20px;
+  padding: 20px 20px 2px;
 }
 
 .debug{
@@ -254,8 +254,33 @@ main .row:last-child .card img{
 footer{
   /*per farlo stare sopra al contenuto dell'aside*/
   position: relative;
+  display: flex;
+  justify-content: space-between;
   height: var(--top-bottom-height);
   background-color: #282828;
+  color: var(--color-princ);
+}
+
+#f-left{
+  display: flex;
+  align-items: center;
+}
+
+#f-left img{
+  width: 50px;
+  height: 50px;
+  margin: 0px 14px;
+}
+
+#f-left .current-song span{
+  color: var(--color-secon);
+  font-size: .8rem;
+  padding-right: 20px;
+}
+
+#f-left .icons i{
+  color: var(--color-secon);
+  padding: 7px ;
 }
 /* ------------------------------ */
 
@@ -270,6 +295,13 @@ footer{
   .card{
     width: calc(100% / 2);
   }
+
+  /* FOOTER */
+  #f-left .icons{
+    display: flex;
+    flex-direction: column;
+  }
+  /* ------------------------------ */
 }
 
 @media screen and (max-width:600px){
