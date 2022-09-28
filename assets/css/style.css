@@ -90,7 +90,8 @@ ul{
 /* ASIDE */
 aside{
   float: left;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: var(--aside-width);
   height: calc(100vh - var(--top-bottom-height));
   background-color: #000000;
@@ -122,6 +123,11 @@ aside nav svg path{
   fill: var(--color-secon-very-light);
 }
 
+#playlist{
+  min-height: 300px;
+  overflow-y: auto;
+}
+
 #playlist #new{
   padding-top: 15px;
 }
@@ -147,10 +153,8 @@ aside nav svg path{
 }
 
 #bottom-aside{
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  width: calc(100% - 40px);
+  margin-top: auto;
+  width: 100%;
 }
 
 #bottom-aside #download{
@@ -229,6 +233,8 @@ main nav li{
 
 /* FOOTER */
 footer{
+  /*per farlo stare sopra al contenuto dell'aside*/
+  position: relative;
   height: var(--top-bottom-height);
   background-color: #282828;
 }
