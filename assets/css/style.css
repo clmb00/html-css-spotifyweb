@@ -10,10 +10,18 @@
   --top-bottom-height: 90px;
   --color-princ: #FFFFFF;
   --color-secon: #717171;
+  --color-secon-light: #808080;
+  --color-secon-very-light: #D2D2D2;
 }
 
 body{
   font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h3{
+  color: var(--color-princ);
+  font-size: 1.1rem;
 }
 
 a{
@@ -21,22 +29,127 @@ a{
   color: var(--color-secon);
 }
 
+span{
+  display: inline-block;
+}
+
+ul{
+  list-style: none;
+}
+
+.margin-bottom-25{
+  margin-bottom: 25px;
+}
+
 .debug{
   border: 2px solid red;
 }
+/* ------------------------------------------------------ */
 
 /* ASIDE */
 aside{
   float: left;
+  position: relative;
   width: var(--aside-width);
   height: calc(100vh - var(--top-bottom-height));
   background-color: #000000;
   padding: 20px;
 }
 
+#logo img:nth-child(1){
+  width: 132px;
+}
+
 #logo img:nth-child(2){
   display: none;
 }
+
+nav li{
+  height: 35px;
+}
+
+nav li a{
+  display: inline-block;
+  line-height: 35px;
+}
+
+nav svg{
+  vertical-align: middle;
+  width: 25px;
+}
+
+nav svg path{
+  fill: var(--color-secon-very-light);
+}
+
+#playlist #new{
+  padding-top: 15px;
+}
+
+#playlist #new span{
+  line-height: 37px;
+}
+
+#playlist #new span:first-of-type{
+  height: 37px;
+  width: 37px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.4rem;
+  background-color: var(--color-secon-light);
+  color: black;
+  margin-right: 3px;
+}
+
+#playlist ul li{
+  font-size: .8rem;
+  padding-bottom: 25px;
+}
+
+#bottom-aside{
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+}
+
+#bottom-aside #download{
+  border-bottom: 1px solid var(--color-secon);
+  padding-bottom: 12px;
+}
+
+#download svg{
+  height: 15px;
+  vertical-align: middle;
+}
+
+#download svg path{
+  fill: var(--color-secon);
+}
+
+#download span{
+  font-size: .8rem;
+  padding-left: 6px;
+}
+
+#bottom-aside #profile{
+  padding: 14px 0px 5px;
+}
+
+#profile img{
+  width: 25px;
+  height: 25px;
+  background-color: var(--color-secon-light);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+#profile h3{
+  display: inline-block;
+  line-height: 24px;
+  margin-left: 5px;
+}
+
 
 /* HEADER */
 header{
@@ -67,6 +180,46 @@ footer{
 
   :root{
     --aside-width: 50px;
+  }
+
+  /* ASIDE */
+  aside{
+    padding: 5px 11px;
+  }
+
+  #logo img:nth-child(1){
+    display: none;
+  }
+  
+  #logo img:nth-child(2){
+    display: initial;
+    width: 28px;
+  }
+
+  nav li a span{
+    display: none;
+  }
+
+  #playlist{
+    display: none;
+  }
+
+  #bottom-aside{
+    left: 11px;
+    width: calc(100% - 22px);
+    text-align: center;
+  }
+
+  #bottom-aside #download{
+    border-bottom: none;
+  }
+
+  #bottom-aside #download span{
+    display: none;
+  }
+
+  #bottom-aside #profile h3{
+    display: none;
   }
 
 }
