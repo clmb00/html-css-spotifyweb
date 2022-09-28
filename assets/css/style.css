@@ -37,6 +37,16 @@ ul{
   list-style: none;
 }
 
+.button{
+  border: 1px solid var(--color-princ);
+  border-radius: 40px;
+  padding: 15px 40px;
+}
+
+.button a{
+  color: var(--color-princ);
+}
+
 .margin-bottom-25{
   margin-bottom: 25px;
 }
@@ -44,7 +54,7 @@ ul{
 .debug{
   border: 2px solid red;
 }
-/* ------------------------------------------------------ */
+/* ------------------------------ */
 
 /* ASIDE */
 aside{
@@ -149,7 +159,7 @@ nav svg path{
   line-height: 24px;
   margin-left: 5px;
 }
-
+/* ------------------------------ */
 
 /* HEADER */
 header{
@@ -161,6 +171,13 @@ header{
   background-color: rgba(0, 0, 4, 0.4);
 }
 
+header .button{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+/* ------------------------------ */
+
 /* MAIN */
 main{
   height: calc(100vh - var(--top-bottom-height));
@@ -168,12 +185,14 @@ main{
   background-color: #141922;
   overflow-y: scroll;
 }
+/* ------------------------------ */
 
 /* FOOTER */
 footer{
   height: var(--top-bottom-height);
   background-color: #282828;
 }
+/* ------------------------------ */
 
 /* MEDIA */
 @media screen and (max-width:552px){
@@ -221,5 +240,15 @@ footer{
   #bottom-aside #profile h3{
     display: none;
   }
+  /* ------------------------------ */
 
+  /* HEADER */
+  /* ------------------------------ */
+
+  /* MAIN */
+  /* ------------------------------ */
+
+  /* FOOTER */
+  /* ------------------------------ */
 }
+/* ------------------------------ */
