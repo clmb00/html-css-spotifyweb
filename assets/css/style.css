@@ -19,9 +19,21 @@ body{
   font-weight: 700;
 }
 
-h3{
+h2, h3{
   color: var(--color-princ);
+}
+
+h2{
+  font-size: 1.6rem;
+}
+
+h3{
   font-size: 1.1rem;
+}
+
+h5{
+  color: var(--color-secon);
+  font-size: .8rem;
 }
 
 a{
@@ -47,8 +59,27 @@ ul{
   color: var(--color-princ);
 }
 
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.card{
+  width: calc(100% / 6 );
+  aspect-ratio: 1/1;
+}
+
 .margin-bottom-25{
   margin-bottom: 25px;
+}
+
+.margin-bottom-12{
+  margin-bottom: 12px;
+}
+
+.padding-20{
+  padding: 20px;
 }
 
 .debug{
@@ -63,7 +94,6 @@ aside{
   width: var(--aside-width);
   height: calc(100vh - var(--top-bottom-height));
   background-color: #000000;
-  padding: 20px;
 }
 
 #logo img:nth-child(1){
@@ -74,21 +104,21 @@ aside{
   display: none;
 }
 
-nav li{
+aside nav li{
   height: 35px;
 }
 
-nav li a{
+aside nav li a{
   display: inline-block;
   line-height: 35px;
 }
 
-nav svg{
+aside nav svg{
   vertical-align: middle;
   width: 25px;
 }
 
-nav svg path{
+aside nav svg path{
   fill: var(--color-secon-very-light);
 }
 
@@ -185,6 +215,16 @@ main{
   background-color: #141922;
   overflow-y: scroll;
 }
+
+main nav{
+  margin-top: var(--top-bottom-height);
+  text-align: center;
+}
+
+main nav li{
+  display: inline-block;
+  padding: 6px 12px;
+}
 /* ------------------------------ */
 
 /* FOOTER */
@@ -195,6 +235,18 @@ footer{
 /* ------------------------------ */
 
 /* MEDIA */
+@media screen and (max-width:878px) {
+  .card{
+    width: calc(100% / 4);
+  }
+}
+
+@media screen and (max-width:639px) {
+  .card{
+    width: calc(100% / 2);
+  }
+}
+
 @media screen and (max-width:552px){
 
   :root{
