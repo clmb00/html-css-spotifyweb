@@ -12,6 +12,8 @@
   --color-secon: #717171;
   --color-secon-light: #808080;
   --color-secon-very-light: #D2D2D2;
+  --progress-song: 30%;
+  --volume: 20%;
 }
 
 body{
@@ -72,6 +74,18 @@ ul{
   text-align: center;
 }
 
+.progress-bar, .actual-progress{
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-secon);
+  margin: 0px 14px;
+}
+
+.progress-bar .actual-progress{
+  background-color: var(--color-secon-very-light);
+  margin: 0;
+}
+
 .margin-bottom-25{
   margin-bottom: 25px;
 }
@@ -84,6 +98,18 @@ ul{
   padding: 20px 20px 2px;
 }
 
+.d-flex{
+  display: flex;
+}
+
+.a-center{
+  align-items: center;
+}
+
+.j-center{
+  justify-content: center;
+}
+
 .debug{
   border: 2px solid red;
 }
@@ -92,7 +118,6 @@ ul{
 /* ASIDE */
 aside{
   float: left;
-  display: flex;
   flex-direction: column;
   width: var(--aside-width);
   height: calc(100vh - var(--top-bottom-height));
@@ -165,7 +190,7 @@ aside nav svg path{
 }
 
 #download svg{
-  height: 15px;
+  height: 20px;
   vertical-align: middle;
 }
 
@@ -254,16 +279,10 @@ main .row:last-child .card img{
 footer{
   /*per farlo stare sopra al contenuto dell'aside*/
   position: relative;
-  display: flex;
   justify-content: space-between;
   height: var(--top-bottom-height);
   background-color: #282828;
   color: var(--color-princ);
-}
-
-#f-left{
-  display: flex;
-  align-items: center;
 }
 
 #f-left img{
@@ -281,6 +300,58 @@ footer{
 #f-left .icons i{
   color: var(--color-secon);
   padding: 7px ;
+}
+
+#f-center{
+  width: 40%;
+}
+
+#f-center .top{
+  font-size: 1.3rem;
+}
+
+#f-center .top i{
+  padding: 11px;
+}
+
+#f-center .top i:nth-of-type(3){
+  padding: 14px 20px;
+  font-size: 2rem;
+}
+
+#f-center .bottom span{
+  padding: 0px 12px;
+  font-size: .7rem;
+}
+
+#f-center .bottom .progress-bar{
+  width: 100%;
+}
+
+#f-center .bottom .actual-progress{
+  width: var(--progress-song);
+}
+
+#f-right{
+  width: 200px;
+}
+
+#f-right i{
+  padding: 0px 8px;
+  font-size: .8rem;
+}
+
+#f-right i:last-of-type{
+  padding-right: 0;
+}
+
+#f-right .progress-bar{
+  margin: 0px 10px;
+  width: 100%;
+}
+
+#f-right .actual-progress{
+  width: var(--volume);
 }
 /* ------------------------------ */
 

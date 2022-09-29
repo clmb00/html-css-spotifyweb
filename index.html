@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <aside class="padding-20">
+  <aside class="d-flex padding-20">
 
     <div id="logo" class="debug margin-bottom-25">
       <img src="./assets/img/logo.svg" alt="Spotify logo">
@@ -163,9 +163,9 @@
 
   </main>
 
-  <footer>
+  <footer class="d-flex a-center">
 
-    <div id="f-left">
+    <div id="f-left" class="d-flex a-center">
       <img src="./assets/img/sinister.jpeg" alt="Cover-Small">
       <div class="current-song debug">
         <h4>Sinister</h4>
@@ -178,20 +178,29 @@
     </div>
 
     <div id="f-center">
-      <div class="top debug">
+      <div class="top d-flex a-center j-center debug">
         <i class="fa-solid fa-shuffle"></i>
         <i class="fa-solid fa-backward-step"></i>
         <i class="fa-regular fa-circle-play"></i>
         <i class="fa-solid fa-forward-step"></i>
         <i class="fa-solid fa-rotate-right"></i>
       </div>
-      <div class="bottom debug"></div>
+      <div class="bottom d-flex a-center debug">
+        <span>0:25</span>
+        <div class="progress-bar">
+          <div class="actual-progress"></div>
+        </div>
+        <span>4:35</span>
+      </div>
     </div>
 
-    <div id="f-right">
-      <i class="fa-solid fa-list debug"></i>
-      <i class="fa-solid fa-desktop debug"></i>
-      <i class="fa-solid fa-volume-high debug"></i>
+    <div id="f-right" class="d-flex a-center">
+      <i class="fa-solid fa-list"></i>
+      <i class="fa-solid fa-desktop"></i>
+      <i class="fa-solid fa-volume-high"></i>
+      <div class="progress-bar">
+        <div class="actual-progress"></div>
+      </div>
     </div>
 
   </footer>
