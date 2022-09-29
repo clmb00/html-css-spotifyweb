@@ -150,11 +150,6 @@ aside nav svg path{
   fill: var(--color-secon-very-light);
 }
 
-#playlist{
-  min-height: 300px;
-  overflow-y: auto;
-}
-
 #playlist #new{
   padding-top: 15px;
 }
@@ -174,7 +169,13 @@ aside nav svg path{
   margin-right: 3px;
 }
 
-#playlist ul li{
+#scroll-playlist{
+  min-height: 100px;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+#scroll-playlist ul li{
   font-size: .8rem;
   padding-bottom: 25px;
 }
