@@ -44,6 +44,10 @@ a{
   color: var(--color-secon);
 }
 
+a:hover{
+  color: var(--color-princ);
+}
+
 span{
   display: inline-block;
 }
@@ -152,6 +156,10 @@ aside nav svg path{
   fill: var(--color-secon-very-light);
 }
 
+aside nav li:hover a svg{
+  filter: brightness(2);
+}
+
 aside nav li.active, aside nav li:active{
   border-left: 3px solid var(--color-terz);
   margin-left: -20px;
@@ -175,6 +183,10 @@ aside nav li.active, aside nav li:active{
   background-color: var(--color-secon-light);
   color: black;
   margin-right: 3px;
+}
+
+#playlist #new:hover span:first-of-type{
+  background-color: var(--color-princ);
 }
 
 #scroll-playlist{
@@ -201,6 +213,10 @@ aside nav li.active, aside nav li:active{
 #download svg{
   height: 20px;
   vertical-align: middle;
+}
+
+#download:hover svg{
+  filter: brightness(2);
 }
 
 #download svg path{
