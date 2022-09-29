@@ -383,12 +383,12 @@ footer{
   }
 
   /* ASIDE */
-  aside.padding-20{
-    padding: 5px 11px;
+  .d-none-xs{
+    display: none;
   }
 
-  #logo img:nth-child(1){
-    display: none;
+  aside.padding-20{
+    padding: 5px 11px;
   }
   
   #logo img:nth-child(2){
@@ -396,24 +396,8 @@ footer{
     width: 28px;
   }
 
-  nav li a span{
-    display: none;
-  }
-
-  #playlist, #scroll-playlist{
-    display: none;
-  }
-
   #bottom-aside{
     text-align: center;
-  }
-
-  #bottom-aside #download{
-    border-bottom: none;
-  }
-
-  #bottom-aside #download span{
-    display: none;
   }
 
   #bottom-aside #profile h3{
