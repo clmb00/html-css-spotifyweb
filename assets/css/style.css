@@ -80,7 +80,7 @@ ul{
 }
 
 .progress-bar, .actual-progress{
-  height: 4px;
+  height: 5px;
   border-radius: 2px;
   background-color: var(--color-secon);
   margin: 0px 14px;
@@ -89,6 +89,26 @@ ul{
 .progress-bar .actual-progress{
   background-color: var(--color-secon-very-light);
   margin: 0;
+  position: relative;
+}
+
+.progress-bar:hover{
+  cursor: pointer;
+}
+
+.progress-bar:hover .actual-progress{
+  background-color: var(--color-terz);
+}
+
+.progress-bar:hover .actual-progress::after{
+  content: "";
+  position: absolute;
+  right: -7.5px;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: var(--color-princ);
 }
 
 .margin-bottom-25{
@@ -333,13 +353,15 @@ footer{
 }
 
 #f-left .current-song span{
-  color: var(--color-secon);
   font-size: .8rem;
   padding-right: 20px;
 }
 
+#f-left .current-song span:hover{
+  text-decoration: underline;
+}
+
 #f-left .icons i{
-  color: var(--color-secon);
   padding: 7px ;
 }
 
@@ -349,15 +371,25 @@ footer{
 
 #f-center .top{
   font-size: 1.3rem;
+  margin-bottom: 10px;
 }
 
 #f-center .top i{
-  padding: 11px;
+  padding: 0px 11px;
 }
 
 #f-center .top i:nth-of-type(3){
   padding: 0px 20px;
   font-size: 2rem;
+  transition: all .25s;
+}
+
+#f-center .top i:hover{
+  cursor: pointer;
+}
+
+#f-center .top i:nth-of-type(3):hover{
+  transform: scale(1.1);
 }
 
 #f-center .bottom span{
