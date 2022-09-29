@@ -12,6 +12,7 @@
   --color-secon: #717171;
   --color-secon-light: #808080;
   --color-secon-very-light: #D2D2D2;
+  --color-terz: #ADFF2F;
   --progress-song: 30%;
   --volume: 20%;
 }
@@ -133,6 +134,7 @@ aside{
 }
 
 aside nav li{
+  position: relative;
   height: 35px;
 }
 
@@ -148,6 +150,12 @@ aside nav svg{
 
 aside nav svg path{
   fill: var(--color-secon-very-light);
+}
+
+aside nav li.active, aside nav li:active{
+  border-left: 3px solid var(--color-terz);
+  margin-left: -20px;
+  padding-left: 17px;
 }
 
 #playlist #new{
@@ -255,8 +263,19 @@ main nav{
 }
 
 main nav li{
+  position: relative;
   display: inline-block;
   padding: 6px 12px;
+}
+
+main nav li.active:after, main nav li:active:after{
+  content: "";
+  position: absolute;
+  left: calc(50% - 15px);
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-terz);
 }
 
 main img{
@@ -316,7 +335,7 @@ footer{
 }
 
 #f-center .top i:nth-of-type(3){
-  padding: 14px 20px;
+  padding: 0px 20px;
   font-size: 2rem;
 }
 
